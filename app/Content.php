@@ -6,6 +6,7 @@ class Content extends Model
     protected $primaryKey = 'id_content';
     protected $table = 'content';
     protected $fillable = [
-        'title', 'desc'
+        'title', 'text'
     ];
+    public $timestamps = false;
 }
