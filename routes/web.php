@@ -16,4 +16,18 @@ $router->get('/', function () use ($router) {
 });
 
 
+//show all
+
+$router->get('content ', 'ContentController@index)';
+
+
 $router->post('content', 'ContentController@store');
+
+//show per id
+$router->get('content/{id}', 'ContentController@show');
+
+//change data
+$router->put('content/{id}', 'ContentController@update');
+
+//delete data
+$router->delete('content/{id}', 'ContentController@destroy');
