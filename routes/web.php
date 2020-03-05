@@ -15,14 +15,16 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+$router->get('/key', function() {
+    return \Illuminate\Support\Str::random(32);
+});
 
 //show all
-
-$router->get('content ', 'ContentController@index)';
 
 
 $router->post('content', 'ContentController@store');
 
+$router->get('content', 'ContentController@index');
 //show per id
 $router->get('content/{id}', 'ContentController@show');
 
